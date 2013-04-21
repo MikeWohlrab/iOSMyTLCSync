@@ -10,4 +10,9 @@
 
 @interface mytlcViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *txtUsername;
+@property (strong, nonatomic) IBOutlet UITextField *txtPassword;
+
+- (IBAction)buttonPressed;
+
 @end

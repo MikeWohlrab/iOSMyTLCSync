@@ -14,6 +14,24 @@
 
 @implementation mytlcViewController
 
+@synthesize txtUsername;
+@synthesize txtPassword;
+
+- (IBAction)buttonPressed {
+    NSString* username = txtUsername.text;
+    NSString* password = txtPassword.text;
+    if ((![username isEqualToString:@""]) && (![password isEqualToString:@""])) {
+        NSLog(@"Username: %@\nPassword: %@", username, password);
+    } else if ((![username isEqualToString:@""]) && ([password isEqualToString:@""])) {
+        NSLog(@"Username: %@", username);
+    } else if (([username isEqualToString:@""]) && (![password isEqualToString:@""])) {
+        NSLog(@"Password: %@", password);
+    } else {
+        NSLog(@"No information");
+    }
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
